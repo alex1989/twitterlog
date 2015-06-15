@@ -39,7 +39,7 @@ class TwitterHandler(Handler):
         Handler.setFormatter(self, TwitterFormatter())
 
     def tweet(self, status):
-        return self.api.update_status(status)
+        return self.api.update_status(status=status)
 
     def emit(self, record):
         try:
