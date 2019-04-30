@@ -44,7 +44,7 @@ class TwitterHandler(Handler):
     def emit(self, record):
         try:
             msg = self.format(record)
-            if isinstance(msg, unicode):
+            if isinstance(msg, str):
                 msg = msg.encode('utf-8', 'replace')
             self.tweet(msg)
         except RuntimeError:
